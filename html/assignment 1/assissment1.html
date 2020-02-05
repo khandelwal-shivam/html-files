@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trend Nxt Assessment 1</title>
+	<style>
+		table,th,td{
+			border:1px solid black;
+		}
+		th,td{
+			text-align:center;
+			padding:5px;
+		}
+		.btn{
+			width:250px;
+			align:center;
+		}
+	</style>
+	<script>
+		 function Calculate(){ 
+			 var company=document.getElementById("company_list").value; 
+			 //console.log(company); 
+			 //alert(company);
+             var cost; 			 
+			 var shares=document.getElementById("shares").value;
+			 //console.log(shares); 
+			 switch(company){ 
+				 case "Wipro":cost=298.45;break; 
+				 case "TATA Conultancy Services":cost=2713.70;break; 
+				 case "Infosys":cost=949.95;break; 
+				 case "TechM":cost=485.85;break;
+				 default:cost=1; 
+			 }
+			 if(shares<10||shares>100)alert("Number of shares must be between 10 and 100");//document.getElementById("result").value="number of shares must be between 10 and 100"; 
+			 else if (shares%10!=0)alert("Stocks can be purchased only in block of 10");
+			 else document.getElementById("result").value=cost*shares; 
+		 } 
+	</script>
+	</head>
+	<body>
+		<table>
+			<tr><th>Ticker</th><th>Price</th></tr>
+			<tr><td>Wipro</td><td>298.45</td></tr>
+			<tr><td>TCS</td><td>2713.70</td></tr>
+			<tr><td>Infosys</td><td>949.95</td></tr>
+			<tr><td>TECHM</td><td>485.85</td></tr>
+		</table>
+		<h1>Stock Trading</h1>
+		<form>
+			<table>
+				<tr>
+					<th>Ticker</th>
+					<td><input type="text" list="companies" id="company_list" required></td>
+				</tr>
+				<tr>
+					<th>Quantity</th>
+					<td><input type="number" min="10" max="100" step="10" id="shares" pattern="[0-9]" required></td>
+				</tr>
+				<tr>
+					<td colspan=2><input type="button" value="submit" class="btn" onClick="Calculate()"></td>
+				</tr>
+			</table>
+		</form>
+		<input type="text" id="result">
+		<datalist id="companies">
+			<option value="Wipro"></option>
+			<option value="TATA Conultancy Services"></option>
+			<option value="Infosys"></option>
+			<option value="TechM"></option>
+		</datalist>
+	</body>
+</html>

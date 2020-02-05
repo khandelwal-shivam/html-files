@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+	<html>
+		<!-- https://topgear-training-gitlab.wipro.com -->
+		<head>
+			<title>Assignment 2</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<style>
+				.logo{
+					display:block;
+					margin-left:auto;
+					margin-right:auto;
+					width:50%;
+					<!-- border: 1px solid black; -->
+				}
+				.image{
+					display:block;
+					margin-left:auto;
+					margin-right:auto;
+					width:1350px;
+					<!-- border:5px solid black; -->
+					border-radius:10px;
+				}
+				.content{
+					margin-left:auto;
+					margin-right:auto;
+				}
+				.btn{
+					width:226px;
+					align:center;
+					background-color:#008CBA;
+					color:white;
+				}
+				.btn:hover{
+					background-color: #4CAF50;
+				}
+				table{
+					
+					padding:20px;
+					text-align:center;
+					width:50%;
+				}
+				td{
+					border:1px solid black;
+					padding:20px;
+					font-family:georgian;
+					font-size:18px;
+					text-align:center;
+					width:50%;
+					font-weight:bold;
+				}
+				input{
+					width:100%;
+				}
+			</style>
+			<script>
+				function store(){
+					var name=document.getElementById("name").value;
+					var age=document.getElementById("age").value;
+					var mail=document.getElementById("email").value;
+					var city=document.getElementById("city").value;
+					console.log("Name :"+name+", Age :"+age+", Email "+mail+", city :"+city);
+				}
+			</script>
+		</head>
+		<Body>
+			<div >
+				<img src="download.svg" class="logo" >
+			</div>
+			<div>
+				<img src="hot-air-balloons-sky.jpg" class="image">
+			</div>
+			<div >
+				<form >
+					<table class="content">
+						<tr>
+							<td>Name</td>
+							<td><input type="text" id="name" placeholder="Enter Full Name" required></td>
+						</tr>
+						<tr>
+							<td>Age</td>
+							<td><input type="text" id="age" placeholder="Enter Age" min="18"required></td>
+						</tr>
+						<tr>
+							<td>Email ID</td>
+							<td><input type="text" id="email" placeholder="Enter Mailing Address" required></td>
+						</tr>
+						<tr>
+							<td>Cities</td>
+							<td><input type="text" id="city" placeholder="Enter City Name" required></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="button" value="Calculate" onClick="store()" class="btn"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</Body>
+	</html>
